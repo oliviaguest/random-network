@@ -12,7 +12,8 @@ for p in prototypes:
         patterns.append(p + 0.01 * i * np.random.randn((len(p))))
 
 layers = 20 # how many layers we want, i.e., how deep is the network
-w = np.random.randn(layers, len(prototypes[0]), len(prototypes[0])) * 0.1 # random weights from one layer to the next, n
+# random weights:
+w = np.random.randn(layers, len(prototypes[0]), len(prototypes[0])) * 0.1
 
 for pat in patterns:
     # for each pattern
@@ -25,5 +26,5 @@ for pat in patterns:
         n = np.tanh(n) # post-synaptic states in n
         if i == layers-1:
             # print the layer, the first five features of the pattern applied at
-            # input and the first five activations in the last layer 
+            # input and the first five activations in the last layer
             print i, pat[0:5], n[0:5]
