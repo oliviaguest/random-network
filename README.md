@@ -1,2 +1,2 @@
 # random-network
-A basic random artificial neural network. 
+A basic random artificial neural network.
