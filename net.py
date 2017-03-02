@@ -24,4 +24,6 @@ for pat in patterns:
         n = np.dot(n, w[i]) # pre-synaptic states in n
         n = np.tanh(n) # post-synaptic states in n
         if i == layers-1:
-            print i, pat[0:5], n[0:5] # print the layer, the input, and the activations
+            # print the layer, the first five features of the pattern applied at
+            # input and the first five activations in the last layer 
+            print i, pat[0:5], n[0:5]
